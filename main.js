@@ -93,7 +93,7 @@ function chicking(box1, box2) {
         document.getElementById("success").play();
     } else {
         tries.innerHTML = `${parseInt(tries.textContent) + 1} / 20`
-        if(tries.innerHTML === "2 / 20") {
+        if(tries.innerHTML === "20 / 20") {
             location.reload();
             localStorage.setItem("result", "Game Over");
         };
@@ -109,7 +109,7 @@ function chicking(box1, box2) {
 
 function match() {
     let match = boxs.filter((e) => e.classList.contains("match"));
-    if(match.length === 2) {
+    if(match.length === 20) {
         boxs.forEach((e) => {
             setTimeout(() => {
                 location.reload();
